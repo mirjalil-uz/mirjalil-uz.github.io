@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mirjalil Mirfozilov</title>
-<meta name="description" content="Mirjalil Mirfozilov — Data Analyst. SQL, Python, Excel and Power BI projects, experience and contact.">
+<meta name="description" content="Mirjalil Mirfozilov — Data Analyst. SQL, BigQuery, Python, Excel and Power BI projects, experience and contact.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
@@ -240,6 +240,7 @@ section.block{padding-block:clamp(64px,9vw,112px);border-top:1px solid var(--lin
 }
 .card:hover{transform:translateY(-6px);border-color:color-mix(in srgb,var(--accent) 45%,var(--line));box-shadow:0 24px 48px -28px rgba(20,40,90,.35)}
 .card.hide{display:none}
+.card.featured{grid-column:1/-1}
 .card .viz{height:170px;background:var(--bg);border-bottom:1px solid var(--line);display:grid;place-items:center;position:relative;overflow:hidden}
 .card .viz::before{
   content:"";position:absolute;inset:0;
@@ -353,7 +354,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
             <table>
               <thead><tr><th>skill</th><th>tools</th><th>used_for</th></tr></thead>
               <tbody>
-                <tr><td>'SQL'</td><td>MySQL · CTEs · window fns</td><td>monthly reporting</td></tr>
+                <tr><td>'SQL'</td><td>MySQL · BigQuery · window fns</td><td>monthly reporting</td></tr>
                 <tr><td>'Python'</td><td>pandas · NumPy · Seaborn</td><td>analysis &amp; KPIs</td></tr>
                 <tr><td>'Excel'</td><td>PivotTables · XLOOKUP</td><td>cleaning &amp; validation</td></tr>
                 <tr><td>'Power BI'</td><td>DAX · data modeling</td><td>management dashboards</td></tr>
@@ -376,11 +377,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
         <div class="about-copy reveal">
           <p>I'm a data analyst with a Computer Information Systems background, and I care about one thing above all: <span class="hl">reports people can trust.</span></p>
           <p>At Bosphorus Enterprises, a Cricket Wireless retail partner, I run the monthly reporting cycle end to end. I pull the data with SQL, clean and validate it in Excel, and build the end-of-month Power BI dashboard that management reviews.</p>
-          <p>Outside of work I keep sharpening the same toolkit on public datasets, from a 15,000-transaction e-commerce analysis in Python to a multi-store retail database in MySQL. I'm looking for a Data Analyst role where reliable reporting drives real business decisions.</p>
+          <p>Outside of work I keep sharpening the same toolkit on public datasets, from a 182,000-order-item e-commerce analysis in Google BigQuery to a multi-store retail database in MySQL. I'm looking for a Data Analyst role where reliable reporting drives real business decisions.</p>
           <div class="stats">
             <div class="stat"><b>95–110</b><span>customer reports produced every month</span></div>
-            <div class="stat"><b data-count="15000" data-suffix="+">15,000+</b><span>transactions analyzed in Python</span></div>
-            <div class="stat"><b data-count="4">4</b><span>end-to-end projects on GitHub</span></div>
+            <div class="stat"><b data-count="182000" data-suffix="+">182,000+</b><span>order items analyzed in BigQuery</span></div>
+            <div class="stat"><b data-count="5">5</b><span>end-to-end projects on GitHub</span></div>
           </div>
         </div>
 
@@ -389,7 +390,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
           <div class="skill-group">
             <h3>languages_and_tools</h3>
             <div class="chips">
-              <span class="chip">SQL (MySQL)</span><span class="chip">Window functions</span><span class="chip">CTEs</span>
+              <span class="chip">SQL (MySQL)</span><span class="chip">Google BigQuery</span><span class="chip">Window functions</span><span class="chip">CTEs</span>
               <span class="chip">Python · pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib · Seaborn</span>
               <span class="chip">Excel</span><span class="chip">PivotTables</span><span class="chip">XLOOKUP</span>
               <span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span><span class="chip">Data modeling</span>
@@ -467,6 +468,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
         <div class="filters" role="group" aria-label="Filter projects by tool">
           <button class="filter" type="button" data-f="all" aria-pressed="true">All</button>
           <button class="filter" type="button" data-f="sql" aria-pressed="false">SQL</button>
+          <button class="filter" type="button" data-f="bigquery" aria-pressed="false">BigQuery</button>
           <button class="filter" type="button" data-f="python" aria-pressed="false">Python</button>
           <button class="filter" type="button" data-f="excel" aria-pressed="false">Excel</button>
           <button class="filter" type="button" data-f="powerbi" aria-pressed="false">Power BI</button>
@@ -474,6 +476,35 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       </div>
 
       <div class="projects">
+
+        <!-- BigQuery e-commerce (featured) -->
+        <article class="card featured reveal" data-tools="sql bigquery">
+          <div class="viz" aria-hidden="true">
+            <svg viewBox="0 0 240 110">
+              <text class="t" x="0" y="8">Monthly revenue · +75.5% YoY</text>
+              <rect class="soft" x="0" y="96" width="240" height="1"/>
+              <rect class="b" x="2"   y="58" width="16" height="38" rx="2"/>
+              <rect class="b" x="22"  y="54" width="16" height="42" rx="2"/>
+              <rect class="b" x="42"  y="57" width="16" height="39" rx="2"/>
+              <rect class="b" x="62"  y="53" width="16" height="43" rx="2"/>
+              <rect class="b" x="82"  y="52" width="16" height="44" rx="2"/>
+              <rect class="b" x="102" y="51" width="16" height="45" rx="2"/>
+              <rect class="b" x="122" y="47" width="16" height="49" rx="2"/>
+              <rect class="b" x="142" y="43" width="16" height="53" rx="2"/>
+              <rect class="b" x="162" y="43" width="16" height="53" rx="2"/>
+              <rect class="b" x="182" y="36" width="16" height="60" rx="2"/>
+              <rect class="b" x="202" y="25" width="16" height="71" rx="2"/>
+              <rect class="b b2" x="222" y="16" width="16" height="80" rx="2"/>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="tools"><span class="tag">Google BigQuery</span><span class="tag">Standard SQL</span><span class="tag">Window functions</span><span class="tag">PIVOT</span><span class="tag">Partitioning</span></div>
+            <h3>E-Commerce Revenue, Retention &amp; Funnel Analysis</h3>
+            <p>Analyzed Google's TheLook e-commerce dataset in BigQuery: 7 related tables with 182,000+ order items, 100,000 customers and 2.4M website events. Built monthly KPIs with window functions, a cohort retention matrix with PIVOT, RFM customer segments with NTILE and a traffic-source funnel, plus a partitioned, clustered reporting table that cut data scanned per query by ~96% (6.52 MB to 232 KB).</p>
+            <div class="finding"><b>Finding</b><span>Revenue grew 75.5% year over year to $2.83M at a steady 52% margin, but only ~5% of new customers order again the next month. Totals reconciled across queries to the cent ($2,833,914.23).</span></div>
+            <a class="gh" href="https://github.com/mirjalil-uz/bigquery-ecommerce-analytics" target="_blank" rel="noopener">View on GitHub <span class="arr">↗</span></a>
+          </div>
+        </article>
 
         <!-- Telecom SQL -->
         <article class="card reveal" data-tools="sql">
